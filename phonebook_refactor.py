@@ -10,7 +10,10 @@ def lookUpNumber(phonebook):
     print("Please enter the name of the entry you would like to look up: ")
     name = input()
     name = name.lower()
-    print(name + "'s phone number is: " + phonebook_dict[name])
+    if(name in phonebook):
+        print(name + "'s phone number is: " + phonebook_dict[name])
+    else:
+        print(name + " is not in the phone book")
 
 def createEntry(phonebook):
     printDivider()
